@@ -1,34 +1,9 @@
-@import "_variables";
-@import "_mixins";
+@import "_buttons";
 
-body {
-  background-color: blue;
+a {
+  @extend %button;
 }
 
-h1 {
-  @include sexyTitle();
-}
-
-/* Nesting
-부모내의 자식에게 속성을 주고 싶다면, 
-대괄호 안에 자식을 넣어서 선언할 수 있다. */
-.box {
-  background-color: greenyellow;
-
-  &:hover {
-    background-color: hotpink;
-  }
-
-  button {
-    color: red;
-    &:hover {
-      background-color: yellow;
-    }
-  }
-
-  //   h1 {
-  //     background-color: $bg;
-  //     color: peru;
-  //     font-size: $title;
-  //   }
+button {
+  @extend %button;
 }
