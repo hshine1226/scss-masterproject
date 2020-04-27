@@ -6,6 +6,12 @@ body {
   background-color: blue;
 }
 
+h1 {
+  color: blue;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
 /* Nesting
 부모내의 자식에게 속성을 주고 싶다면, 
 대괄호 안에 자식을 넣어서 선언할 수 있다. */
@@ -23,10 +29,4 @@ body {
 
 .box button:hover {
   background-color: yellow;
-}
-
-.box h1 {
-  background-color: #e7473c;
-  color: peru;
-  font-size: 50px;
 }

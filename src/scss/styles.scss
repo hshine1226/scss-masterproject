@@ -1,7 +1,12 @@
 @import "_variables";
+@import "_mixins";
 
 body {
   background-color: blue;
+}
+
+h1 {
+  @include sexyTitle();
 }
 
 /* Nesting
@@ -21,9 +26,9 @@ body {
     }
   }
 
-  h1 {
-    background-color: $bg;
-    color: peru;
-    font-size: $title;
-  }
+  //   h1 {
+  //     background-color: $bg;
+  //     color: peru;
+  //     font-size: $title;
+  //   }
 }
