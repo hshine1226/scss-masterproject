@@ -1,3 +1,32 @@
-h1 {
+@charset "UTF-8";
+/* scss 파일명이 underbar(_)로 시작하면 css파일로 컴파일 되지 않는다. 
+
+/* variables 선언 방법 */
+body {
+  background-color: blue;
+}
+
+/* Nesting
+부모내의 자식에게 속성을 주고 싶다면, 
+대괄호 안에 자식을 넣어서 선언할 수 있다. */
+.box {
+  background-color: greenyellow;
+}
+
+.box:hover {
+  background-color: hotpink;
+}
+
+.box button {
+  color: red;
+}
+
+.box button:hover {
+  background-color: yellow;
+}
+
+.box h1 {
+  background-color: #e7473c;
   color: peru;
+  font-size: 50px;
 }
