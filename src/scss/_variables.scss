@@ -1,6 +1,7 @@
-/* scss 파일명이 underbar(_)로 시작하면 css파일로 컴파일 되지 않는다. 
+$bestHorrorRed: #d94338;
+$bestHorrorWhite: #f0f0f0;
+$bestHorrorFixedWidth: 33%;
 
-/* variables 선언 방법 */
-
-$bg: #e7473c;
-$title: 50px;
+$paintBoxCategory: 10px;
+$paintBoxTitle: 25px;
+$paintBoxColor: rgba(0, 0, 0, 0.7);
