@@ -5,25 +5,18 @@
 
 body {
   height: 100vh;
-  width: 100%;
+  background-color: #af7832;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-}
-
-.column {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
+  -ms-grid-columns: 1fr 1.2fr 1fr;
+      grid-template-columns: 1fr 1.2fr 1fr;
   -ms-grid-rows: 1fr 5fr 1fr;
       grid-template-rows: 1fr 5fr 1fr;
-  border: thin solid #af7832;
-  border-top: none;
-  border-bottom: none;
+  gap: 1px;
 }
 
-.column .row__top {
+body > * {
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,31 +26,78 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: thin solid #af7832;
+  color: #af7832;
+  text-transform: uppercase;
 }
 
-.column .row__center {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .center__image {
+  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Meyer_10-600x600.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.column .row__center.nav {
-  width: 100%;
+body .number__row {
+  background-color: #af7832;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[5];
-      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1px;
+  height: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.column .row__center.nav .nav {
-  width: 100%;
-  height: 100%;
+body .number__row .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+  transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+body .number__row .number:hover {
+  background-color: #af7832;
+  color: white;
+}
+
+body .scrolling__text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body .scrolling__text span {
+  -webkit-animation: 10s linear infinite scrollText;
+          animation: 10s linear infinite scrollText;
+}
+
+@-webkit-keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }

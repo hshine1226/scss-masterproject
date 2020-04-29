@@ -1,41 +1,65 @@
+@import "_variables";
+
 * {
   box-sizing: border-box;
 }
 
 body {
   height: 100vh;
-  width: 100%;
+  background-color: $tenByNineteenBg;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.column {
-  width: 100%;
-  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
   grid-template-rows: 1fr 5fr 1fr;
-  border: thin solid #af7832;
-  border-top: none;
-  border-bottom: none;
+  gap: 1px;
 
-  .row__top {
+  & > * {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: thin solid #af7832;
+    color: $tenByNineteenBg;
+    text-transform: uppercase;
   }
-  .row__center {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .center__image {
+    background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Meyer_10-600x600.jpg");
+    background-size: cover;
+    background-position: center;
   }
-  .row__center.nav {
-    width: 100%;
+
+  .number__row {
+    background-color: $tenByNineteenBg;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    .nav {
-      width: 100%;
-      height: 100%;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    height: 100%;
+    align-items: stretch;
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      cursor: pointer;
+      transition: color 0.3s linear, background-color 0.3s linear;
+      &:hover {
+        background-color: $tenByNineteenBg;
+        color: white;
+      }
+    }
+  }
+  .scrolling__text {
+    white-space: nowrap;
+    overflow: hidden;
+    span {
+      animation: 10s linear infinite scrollText;
+    }
+  }
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 }
