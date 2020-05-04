@@ -1,0 +1,223 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+body h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 1em 0;
+  text-align: center;
+}
+
+body h3 {
+  font-size: 1.5em;
+  font-weight: 200;
+  text-align: center;
+  margin: 1em 0;
+}
+
+body #featuring-text {
+  font-size: 0.8em;
+}
+
+body #featuring-text a {
+  color: #ff6429;
+  font-weight: 500;
+  border-bottom: 1px solid #ff6429;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  padding: 11px 0;
+  z-index: 6;
+  background-color: white;
+}
+
+header .outer-content-wrap {
+  padding: 0 6vw;
+  position: relative;
+  margin: 0 auto;
+}
+
+header .outer-content-wrap .inner-content-wrap {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+header .outer-content-wrap .inner-content-wrap .menu-wrap {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+header .outer-content-wrap .inner-content-wrap .menu-wrap ul {
+  position: relative;
+  display: block;
+  list-style: none;
+}
+
+header .outer-content-wrap .inner-content-wrap .menu-wrap ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: baseline;
+}
+
+header .outer-content-wrap .inner-content-wrap .header-logo {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header .outer-content-wrap .inner-content-wrap .header-logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+header .outer-content-wrap .inner-content-wrap .header-logo span {
+  display: inline-block;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+header .outer-content-wrap .inner-content-wrap .search-button {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+}
+
+.contents {
+  margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+.contents .contents__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.contents .contents__wrapper .content__image {
+  width: auto;
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/random/1040x1300");
+  background-size: cover;
+}
+
+.contents .contents__wrapper .content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.contents .contents__wrapper .content__text .text__header {
+  width: 25vw;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.contents .contents__wrapper .content__text .text__featuring {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+.contents .contents__wrapper .content__text .text__featuring a {
+  color: #ff6429;
+  font-weight: 500;
+  border-bottom: 1px solid #ff6429;
+}
+
+.text-panel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #efcb56;
+}
+
+.text-panel .outer-content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+  padding: 7em 10em;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.gallery .gallery__image {
+  background-image: url("https://source.unsplash.com/random");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.gallery .gallery__image:nth-child(1), .gallery .gallery__image:nth-child(5), .gallery .gallery__image:nth-child(7), .gallery .gallery__image:nth-child(10) {
+  grid-column: span 2;
+}
+
+.gallery .gallery__image:hover {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
