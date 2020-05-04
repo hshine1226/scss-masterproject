@@ -71,12 +71,16 @@ body .page main {
 }
 
 body .page main .hero {
-  margin-top: 50px;
-}
-
-body .page main .hero img {
   height: 70vh;
-  width: auto;
+  width: 100%;
+  background-image: url("https://source.unsplash.com/random/1000x700");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
 }
 
 body .page main .sticky-headline {
