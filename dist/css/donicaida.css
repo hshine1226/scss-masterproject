@@ -1,0 +1,126 @@
+html {
+  font-family: "Nanum Myeongjo", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin-left: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+
+header {
+  margin: 2rem 2rem 0rem 0;
+}
+
+.label {
+  color: #fc2c1d;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.projects {
+  margin-top: 8.5rem;
+  margin-right: 2rem;
+}
+
+.projects .projects__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .projects__wrapper .label__wrapper {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3.8fr 6fr;
+      grid-template-columns: 1fr 3.8fr 6fr;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects .projects__wrapper .label__wrapper,
+  .projects .projects__wrapper .project__year,
+  .projects .projects__wrapper .project__info {
+    display: none;
+  }
+}
+
+.projects .projects__wrapper .project__wrapper {
+  width: 100%;
+  border-top: 1px solid black;
+  padding-top: 1.1rem;
+  padding-bottom: 0.85rem;
+}
+
+.projects .projects__wrapper .project__wrapper .project {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 6fr;
+      grid-template-columns: 1fr 4fr 6fr;
+  cursor: pointer;
+}
+
+.projects .projects__wrapper .project__wrapper .project:hover {
+  font-style: italic;
+}
+
+.projects .projects__wrapper .project__wrapper .project .project__client {
+  width: 10rem;
+}
+
+.projects .projects__wrapper .project__wrapper .project .project__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-grid-column: -1;
+      grid-column-start: -1;
+}
+
+.education {
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+
+.about {
+  margin-top: 5.5rem;
+  margin-bottom: 4.5rem;
+  margin-right: 2rem;
+}
+
+.about a {
+  cursor: pointer;
+  color: #fc2c1d;
+  text-decoration: underline;
+}
+
+.about a:hover {
+  font-style: italic;
+}
